@@ -9,11 +9,12 @@ workflows:
                 XCODE_WORKSPACE: ios/Runner
                 XCODE_SCHEME: Runner
             xcode: latest
-            cocoapods: default
+#             cocoapods: default
+#         scripts:
+#             - name: Build for iOS
+#               script: flutter build ios
         scripts:
-            - name: Build for iOS
-              script: flutter build ios
-        scripts:
+            - flutter build ios
             - xcodebuild build -workspace "$XCODE_WORKSPACE.xcworkspace" -scheme "$XCODE_SCHEME" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
         artifacts:
             - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
