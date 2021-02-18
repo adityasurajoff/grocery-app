@@ -9,7 +9,7 @@ workflows:
                 XCODE_WORKSPACE: ios/Runner
                 XCODE_SCHEME: Runner
             xcode: latest
-#             cocoapods: default
+            cocoapods: default
 #         scripts:
 #             - name: Build for iOS
 #               script: flutter build ios
