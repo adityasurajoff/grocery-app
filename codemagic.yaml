@@ -2,6 +2,9 @@
 # Please review and update values in curly braces
 
 workflows:
+    scripts:
+        - name: Build for iOS
+          script: flutter build ios
     ios-app:
         name: iOS App
         environment:
